@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:kyer="http://kuberam.ro/ns/kyer" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" exclude-result-prefixes="kyer" version="1.0">
+    <xsl:output method="xml"/>
+    <xsl:template match="kyer:menu">
+        <xsl:element name="div">
+            <xsl:copy-of select="@*"/>
+            <xsl:attribute name="class">fg-toolbar ui-widget-header ui-corner-all ui-helper-clearfix</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="kyer:optionset">
+        <xsl:element name="div">
+            <xsl:copy-of select="@*"/>
+            <xsl:choose>
+                <xsl:when test="@selection='none'">
+                    <xsl:attribute name="class">fg-buttonset ui-helper-clearfix</xsl:attribute>
+                </xsl:when>
+                <xsl:when test="@selection='single'">
+                    <xsl:attribute name="class">fg-buttonset fg-buttonset-single ui-helper-clearfix</xsl:attribute>
+                </xsl:when>
+            </xsl:choose>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="kyer:option">
+        <xsl:choose>
+            <xsl:when test="@appearance='text-button'">
+                <button id="{@id}" class="fg-button ui-state-default ui-priority-primary ui-corner-all" onclick="{@command}" title="{@title}">
+                    <xsl:copy-of select="@*"/>
+                    <xsl:copy-of select="*[local-name() = 'label']"/>
+                </button>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+</xsl:stylesheet>

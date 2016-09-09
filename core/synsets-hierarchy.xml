@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="text"/>
+    <xsl:template match="/">
+        <xsl:text>Hypernyms:</xsl:text>
+	&lt;br/&gt;
+        <xsl:for-each select="//hypernyms/synset">
+            <xsl:for-each select=".//term">
+		    &lt;div class="ssa-word-container" ssa-word="{.}"&gt;
+                    	<xsl:value-of select="."/>
+			&lt;/div&gt;
+                <xsl:text> </xsl:text>
+            </xsl:for-each>
+            <xsl:value-of select="./gloss"/>
+	    &lt;br/&gt;
+        </xsl:for-each>
+	&lt;p/&gt;
+	Word: &lt;div class="ssa-word-container" ssa-word="{/items/@word}"&gt;
+            	<xsl:value-of select="/items/@word"/>
+		&lt;/div&gt;
+	&lt;p/&gt;
+        <xsl:text>Hyponyms:</xsl:text>
+	&lt;br/&gt;
+        <xsl:for-each select="//hyponyms/synset">
+            <xsl:for-each select=".//term">
+		    &lt;div class="ssa-word-container" ssa-word="{.}"&gt;
+                    <xsl:value-of select="."/>
+		    &lt;/div&gt;
+            </xsl:for-each>
+            <xsl:value-of select="./gloss"/>
+	    &lt;br/&gt;
+        </xsl:for-each>
+	&lt;script type="text/javascript" charset="utf-8"&gt;
+		$(".ssa-word-container").click(function() {
+			ssa._fWordNetLookup($(this).attr('ssa-word'));		
+		});
+		&lt;/script&gt;
+    </xsl:template>
+</xsl:stylesheet>

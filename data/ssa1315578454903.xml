@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xml:base="http://127.0.0.1:8080/web-apps/tests/structured-subjects-annotator/core/ssa.html" xml:id="ssa1315578454903">
+    <rdf:Description rdf:about="about">
+        <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">anonymous</dc:creator>
+        <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">1315578454902</dc:date>
+        <ssa:subject-type xmlns:ssa="http://exist-db.org/ns/structured-subjects-editor/">comparison</ssa:subject-type>
+        <ssa:topical-component xmlns:ssa="http://exist-db.org/ns/structured-subjects-editor/" ssa:form="named-entity">word</ssa:topical-component>
+        <ssa:geographical-component xmlns:ssa="http://exist-db.org/ns/structured-subjects-editor/">geographical</ssa:geographical-component>
+        <ssa:temporal-component xmlns:ssa="http://exist-db.org/ns/structured-subjects-editor/" ssa:form="historic-period-name">time</ssa:temporal-component>
+    </rdf:Description>
+</rdf:RDF>

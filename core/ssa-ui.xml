@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <div id="add-subject-dialog" title="Add structured subject">
+        <label>Select type of subject:</label>
+        <input type="radio" checked="true" name="structured_subject_type" value="basic" id="basic-subject"/>
+        <label for="basic-subject">Basic</label>
+        <input type="radio" name="structured_subject_type" value="comparison" id="comparison-subject"/>
+        <label for="comparison-subject">Comparison</label>
+        <p/>
+        <label>Select form of topical component</label>
+        <input type="radio" checked="true" name="topical_component_form" value="concept" id="concept"/>
+        <label for="concept">Concept</label>
+        <input type="radio" name="topical_component_form" value="named-entity" id="named-entity"/>
+        <label for="named-entity">Named Entity</label>
+        <input type="radio" name="topical_component_form" value="work" id="work"/>
+        <label for="work">Work</label>
+        <p/>
+        <label for="topical-component">Topical Component</label>
+        <input type="text" id="topical-component" class="text ui-widget-content ui-corner-all" size="20"/>
+        <button id="lookup-wordnet-button" onclick="ssa._fWordNetLookup($('#topical-component').val())">WordNet</button>
+        <p/>
+        <label for="geographical-component">Geographical Component</label>
+        <input type="text" id="geographical-component" class="text ui-widget-content ui-corner-all" size="20"/>
+        <p/>
+        <label>Select form of temporal component</label>
+        <input type="radio" checked="true" name="temporal_component_form" value="time-point" id="time-point"/>
+        <label for="time-point">Point in Time</label>
+        <input type="radio" name="temporal_component_form" value="historic-period-name" id="historic-period-name"/>
+        <label for="historic-period-name">Name of a historic period</label>
+        <input type="radio" name="temporal_component_form" value="time-span" id="time-span"/>
+        <label for="time-span">Span of Time</label>
+        <p/>
+        <label for="temporal-component">Temporal Component</label>
+        <input type="text" id="temporal-component" class="text ui-widget-content ui-corner-all" size="20"/>
+        <p/>
+        <div class="ui-widget ui-widget-content ui-corner-all">Synsets
+		<div id="synsets-hierarchy-container"/>
+        </div>
+    </div>
+</div>

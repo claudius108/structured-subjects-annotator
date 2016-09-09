@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:ssa="http://exist-db.org/ns/structured-subjects-editor/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="xml"/>
+    <xsl:template match="/">
+        <script type="text/javascript" charset="utf-8">
+		    ssa._oAutocompleteSourceTopical = [];
+		    ssa._oAutocompleteSourceGeographical = [];
+		    ssa._oAutocompleteSourceTemporal = [];
+		    <xsl:for-each select=".//rdf:RDF">
+			    ssa._oAutocompleteSourceGeographical.push({"id" :"<xsl:value-of select="@xml:id"/>", "label" : "<xsl:value-of select="concat(rdf:Description/ssa:geographical-component, ', subject ', @xml:id)"/>", "value" : "<xsl:value-of select="rdf:Description/ssa:geographical-component"/>"});
+			    ssa._oAutocompleteSourceTemporal.push({"id" :"<xsl:value-of select="@xml:id"/>", "label" : "<xsl:value-of select="concat(rdf:Description/ssa:temporal-component, ', subject ', @xml:id)"/>", "value" : "<xsl:value-of select="rdf:Description/ssa:temporal-component"/>"});
+			    ssa._oAutocompleteSourceTopical.push({"id" :"<xsl:value-of select="@xml:id"/>", "label" : "<xsl:value-of select="concat(rdf:Description/ssa:topical-component, ', subject ', @xml:id)"/>", "value" : "<xsl:value-of select="rdf:Description/ssa:topical-component"/>"});
+		    </xsl:for-each>
+        </script>
+    </xsl:template>
+</xsl:stylesheet>

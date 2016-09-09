@@ -1,0 +1,20 @@
+.notice-success {
+	background-color: #090 !important;
+	font-weight: bold;
+}
+.notice-error {
+	background-color:#900 !important;
+	font-weight: bold;
+}
+#existing-structured-subjects-master-container {
+	font-size: 10px;
+} 
+#new-structured-subjects-master-container {
+	font-size: 10px;
+}
+.ssa-word-container {
+	text-decoration: underline;
+	cursor: default;
+	display: inline;
+	margin-right: 10px;
+}

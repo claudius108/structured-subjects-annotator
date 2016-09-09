@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:ssa="http://exist-db.org/ns/structured-subjects-editor/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="" xml:id="id">
+    <rdf:Description rdf:about="">
+        <dc:creator/>
+        <dc:date/>
+        <ssa:subject-type/>
+        <ssa:topical-component ssa:form=""/>
+        <ssa:geographical-component/>
+        <ssa:temporal-component ssa:form=""/>
+    </rdf:Description>
+</rdf:RDF>

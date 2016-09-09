@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kyer:menu xmlns:kyer="http://kuberam.ro/ns/kyer" xmlns:xf="http://www.w3.org/2002/xforms" id="kyer-toolbar" type="toolbar" appearance="kyer menu">
+    <kyer:optionset selection="none">
+        <kyer:option id="add-subject-button" title="Add subject" command="ssa.fAddSubject()" appearance="text-button">
+            <xf:label>Add subject</xf:label>
+        </kyer:option>
+    </kyer:optionset>
+    <kyer:optionset selection="none">
+        <kyer:option id="existing-subjects-button" title="Existing subjects" command="ssa.fShowExistingSubjects()" appearance="text-button">
+            <xf:label>Existing subjects</xf:label>
+        </kyer:option>
+    </kyer:optionset>
+    <kyer:optionset selection="none">
+        <kyer:option id="new-subjects-button" title="New subjects" command="ssa.fShowNewSubjects()" appearance="text-button">
+            <xf:label>New subjects</xf:label>
+        </kyer:option>
+    </kyer:optionset>
+    <kyer:optionset selection="none">
+        <kyer:option id="new-subjects-button" title="Save new subjects" command="ssa.fSaveNewSubjects()" appearance="text-button">
+            <xf:label>Save new subjects</xf:label>
+        </kyer:option>
+    </kyer:optionset>
+</kyer:menu>
